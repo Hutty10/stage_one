@@ -6,8 +6,8 @@ def index(request:HttpRequest)->JsonResponse:
     track:str = request.GET.get('track','')
     utc_time:str = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
     current_day:str = datetime.now().strftime('%A')
-    github_file_url:str = ''
-    github_repo_url:str = ''
+    github_file_url:str = 'https://github.com/Hutty10/stage_one/blob/master/core/view.py'
+    github_repo_url:str = 'https://github.com/Hutty10/stage_one'
 
     response = {
         'slack_name': slack_name,
